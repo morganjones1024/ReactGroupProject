@@ -9,7 +9,7 @@ import Product from "./components/Product";
 function App() {
   return (
     <div>
-      {/* <Navbar></Navbar> */}
+      <Navbar></Navbar> 
       <div>
         <ProductList />
       </div>
