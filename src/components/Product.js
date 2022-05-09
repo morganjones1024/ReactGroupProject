@@ -5,14 +5,15 @@ import Review from './Review';
 
 function Product(props) {
 	//
-	let [ counter, setCounter ] = useState(0);
 	let [ review, setReview ] = useState(false);
 	let [ fullDescription, setFullDescription ] = useState(false);
-
+	let navigate = useNavigate();
+	
 	//function to set the counter to increment
 	function handleClick() {
 		setReview(!review);
-	}
+		navigate ("/review",  {state: {id:props.id}});
+	} 
 
 	//function to
 	function handleButton() {
@@ -30,6 +31,9 @@ function Product(props) {
 	if (review) {
 		needReview = <Review />;
 	}
+
+	
+
 	return (
 		<div>
 			<h2> {props.name}</h2>

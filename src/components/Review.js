@@ -1,4 +1,20 @@
+import { useNavigate, useLocation } from 'react-router-dom';
+
+function addReview() {
+    
+}
+
 function Review(){
+  let location = new useLocation();
+	if (!location) {
+  
+		return (
+    <div>
+        No product found!
+    </div>
+    )
+	} 
+  // location.state.id has product id (import product list)
 return(
 <form>
   <div className="form-group">
@@ -28,6 +44,7 @@ return(
   <div class="form-group">
     <label for="exampleFormControlTextarea1">Example textarea</label>
     <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+    <button onClick={addReview}>Submit</button>
   </div>
   </form>
 );
