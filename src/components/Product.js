@@ -12,9 +12,11 @@ function Product(props) {
 	//function to set the counter to increment
 	function handleClick() {
 		setReview(!review);
-		navigate ("/review",  {state: {id:props.id}});
+		navigate ("/review",  {state: {id: props.id}});
 	} 
 
+	
+	
 	//function to
 	function handleButton() {
     console.log(fullDescription)

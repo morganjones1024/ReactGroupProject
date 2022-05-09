@@ -1,14 +1,12 @@
 import Product from "./Product";
 import productArray from "../model";
 
-function ProductList() {
+
+function ProductList(props) {
   
   let productElements = productArray.map((product) => (
     <div>
-      {/* <img src={product.image} alt={product.name} />
-      name={product.name}
-      {product.price}
-      {product.description} */}
+     
       <Product
         name={product.name}
         price={product.price}
