@@ -3,11 +3,13 @@ import productArray from "../model";
 
 
 function ProductList(props) {
-  
+  // let [cartItems, setcartItems] = useState([]);
+
   let productElements = productArray.map((product) => (
     <div>
-     
       <Product
+        addCart={props.addCart}
+        removeCart={props.removeCart}
         name={product.name}
         price={product.price}
         image={product.image}

@@ -1,5 +1,4 @@
-import Review from "./Review";
-import { useNavigate, useLocation, useState } from "react-router-dom";
+import {  useLocation} from "react-router-dom";
 import Product from "../components/Product";
 import productArray from "../model";
 
