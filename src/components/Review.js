@@ -4,7 +4,7 @@ import reviewModel from "../reviewModel";
 import Reviews from "./Reviews";
 
 function Review(props) {
-  let location = new useLocation();
+  let location = useLocation();
   let messageInput = React.useRef();
   let ratingInput = React.useRef();
   let reviewerInput = React.useRef();

@@ -3,12 +3,10 @@ import { useNavigate, useLocation, useState } from "react-router-dom";
 import Product from "../components/Product";
 import productArray from "../model";
 
-
-
 function Reviews(props) {
   let location = new useLocation();
   let id = location.state.id;
- 
+
   //Get Product by ID
   let product = {};
   for (let i = 0; i < productArray.length; i++) {
@@ -20,6 +18,7 @@ function Reviews(props) {
       let image = productArray[i].image;
       let description = productArray[i].description;
       product = {
+        id: id,
         name: name,
         price: price,
         image: image,
@@ -29,52 +28,48 @@ function Reviews(props) {
   }
 
   console.log(props.reviews);
-  
+
   let productReviews = [];
-  let count=0;
+  let count = 0;
   let total = 0;
-  let averageRating=null
+  let averageRating = null;
   console.log(id);
   let keys = props.reviews[id];
   console.log(keys);
   for (let i = 0; i < keys.length; i++) {
     console.log(keys[i].message);
     console.log(id);
-  
-      let message = keys[i].message;
-      console.log(message);
-      let reviewer = keys[i].reviewer;
-      let rating = keys[i].rating;
-      
-      let review = {
-        message: message,
-        reviewer: reviewer,
-        rating: rating,
-        
-      };
-      count ++;
-      total+= parseInt(keys[i].rating);
-      
 
-      productReviews.push(review)
-    
+    let message = keys[i].message;
+    console.log(message);
+    let reviewer = keys[i].reviewer;
+    let rating = keys[i].rating;
+
+    let review = {
+      message: message,
+      reviewer: reviewer,
+      rating: rating,
+    };
+    count++;
+    total += parseInt(keys[i].rating);
+
+    productReviews.push(review);
   }
- 
-  if (count>0){averageRating=total/count};
-  let test = productReviews.map((review)=>(
-    
-      <div>
+
+  if (count > 0) {
+    averageRating = total / count;
+  }
+  let test = productReviews.map((review) => (
+    <div>
       <p>Rating {review.rating}</p>
       <p>Review:{review.message}</p>
       <p>Reviewer: {review.reviewer}</p>
-     
-      </div>
+    </div>
   ));
-  
 
   return (
     <>
-    <p>Product ID: {location.state.id}</p>
+      <p>Product ID: {location.state.id}</p>
       <Product
         name={product.name}
         price={product.price}
@@ -83,8 +78,8 @@ function Reviews(props) {
         description={product.description}
         id={product.id}
       />
-    <p>Average Rating:{averageRating}</p>
-     {test}
+      <p>Average Rating:{averageRating}</p>
+      {test}
     </>
   );
 }
