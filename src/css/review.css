@@ -1,0 +1,10 @@
+.form-group
+{text-align: left;
+font-weight: 4500;
+color: rgba(1, 1, 26, 0.803);}
+
+#avg{
+    color: white;
+    background-color: rgb(2, 6, 4);
+    font-weight: 700;
+}

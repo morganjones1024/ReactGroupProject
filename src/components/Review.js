@@ -2,6 +2,7 @@ import { useNavigate, useLocation, useState } from "react-router-dom";
 import React from "react";
 import reviewModel from "../reviewModel";
 import Reviews from "./Reviews";
+import "../css/review.css";
 
 function Review(props) {
   let location = useLocation();
@@ -27,19 +28,19 @@ function Review(props) {
 
   return (
     <div>
-      <p>Product Id {id}</p>
+      {/* <p>Product Id {id}</p> */}
       <div className="form-group">
-        <label htmlFor="exampleFormControlInput1">Email address</label>
+        <label htmlFor="exampleFormControlInput1">Product Reviewer</label>
         <input
           ref={reviewerInput}
           type="email"
           className="form-control"
           id="exampleFormControlInput1"
-          placeholder="name@example.com"
+          placeholder="name"
         />
       </div>
       <div className="form-group">
-        <label htmlFor="exampleFormControlSelect1">Example select</label>
+        <label htmlFor="exampleFormControlSelect1">Rating</label>
         <select
           ref={ratingInput}
           className="form-control"
@@ -53,7 +54,7 @@ function Review(props) {
         </select>
       </div>
       <div className="form-group">
-        <label htmlFor="exampleFormControlTextarea1">Example textarea</label>
+        <label htmlFor="exampleFormControlTextarea1">Review</label>
         <textarea
           ref={messageInput}
           className="form-control"

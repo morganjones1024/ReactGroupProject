@@ -1,26 +1,39 @@
+div{
+  text-align: center;
+}
 
-.jumbotron {
-    background: url("https://static.toiimg.com/photo/63882496.cms?imgsize=137715");
-   
-    background-size: 100% 130%;
+h3{
+word-wrap: break-word;
+width: 66%;
+position: relative;
+left: 10rem;
 
-    
-  }
-  .btn-primary{
-    background-color: #343a40;
-    border-color:  #343a40;
+}
 
-  }
+.productButton{
+  color:white;
+  background-color: black;
+  border-radius: 5%;
+  padding: 5px;
+  margin: 7px;
+
+}
+#productid{
+  background-color: purple;
+  
+}
 
 .lead{
     font-size: 19;
     margin-left: 80px;
     color: black !important
   }
- 
+.bd-example{
+  margin-top: 50;
+}
 
 .carousel-item{
-  
+  max-height: 200vh;
   width:700px;
   height: 500px;
   left:50%;
@@ -33,3 +46,10 @@
   .carousel-caption{ color: black;
           }
 #chicken{color: white;}
+
+img.d-block.d-block{
+  margin-top: 18rem;
+  height: 300px;
+  width: 100%;
+  object-fit: contain;
+}

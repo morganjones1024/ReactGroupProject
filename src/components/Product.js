@@ -7,6 +7,7 @@ import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import Button from "@mui/material/Button";
 import AddIcon from "@mui/icons-material/Add";
 import RemoveIcon from "@mui/icons-material/Remove";
+import "../css/productList.css"
 
 function Product(props) {
   //
@@ -50,12 +51,14 @@ function deleteCartHandler(){
 
   return (
     <div>
-      <h2> {props.name}</h2>
+      <h3> {props.name}</h3>
       {description}
-      <h2>Price: {props.price} </h2>
+      <h4>Price: {props.price} </h4>
       <img alt={props.name} src={props.image} width="150" height="70" />
-      <button onClick={handleClick}>Leave a Review</button>
-      <button onClick={handleButton}>Full Description</button>
+      <br></br>
+      <br></br>
+      <button className="productButton" onClick={handleClick}>Leave a Review</button>
+      <button className="productButton" id="productid" onClick={handleButton}>Full Description</button>
       <div style={{ display: "block", padding: 30 }}>
         <div>
           <Badge color="secondary" badgeContent={itemCount}>

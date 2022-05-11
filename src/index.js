@@ -35,13 +35,12 @@ function App() {
       return;
     }
     newCartItems[id]--;
-    if (newCartItems[id]<=0){
+    if (newCartItems[id] <= 0) {
       delete newCartItems[id];
-    } 
+    }
     setcartItems(newCartItems);
   }
-  
-  
+
   function addReview(productId, message, rating, reviewer) {
     let newReview = { message: message, rating: rating, reviewer: reviewer };
     let newReviews = Object.assign({}, reviews);
@@ -53,32 +52,33 @@ function App() {
     setReviews(newReviews);
   }
 
-  return (<>
-    
-    <Router>
-    <Navbar></Navbar>
-      <div>
+  return (
+    <>
+      <Router>
+        <Navbar></Navbar>
         
         <div>
-          <Routes>
-            <Route path="/" element={<ProductList addCart={addCart} removeCart={removeCart} />} />
-            <Route
-              path="/Review"
-              element={<Review reviews={reviews} addReview={addReview} />}
-            />
-            <Route
-              path="/reviews"
-              element={<Reviews reviews={reviews} addReview={addReview} />}
-            />
-            <Route
-              path="/cart"
-              element={<Cart cartItems={cartItems}  />}
-            />
-            
-          </Routes>
+          <div>
+            <Routes>
+              <Route
+                path="/"
+                element={
+                  <ProductList addCart={addCart} removeCart={removeCart} />
+                }
+              />
+              <Route
+                path="/Review"
+                element={<Review reviews={reviews} addReview={addReview} />}
+              />
+              <Route
+                path="/reviews"
+                element={<Reviews reviews={reviews} addReview={addReview} addCart={addCart} removeCart={removeCart} />}
+              />
+              <Route path="/cart" element={<Cart cartItems={cartItems} />} />
+            </Routes>
+          </div>
         </div>
-      </div>
-    </Router>
+      </Router>
     </>
   );
 }

@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 
-
 function Navbar(props) {
   return (
     <div>
@@ -28,12 +27,11 @@ function Navbar(props) {
                 Home
               </Link>
             </li>
-          
           </ul>
           <span className="navbar-text">
-          <Link className={"nav-link"} to="/cart">
+            <Link className={"nav-link"} to="/cart">
               <ShoppingCartIcon />
-              </Link>
+            </Link>
           </span>
         </div>
       </nav>

@@ -1,10 +1,13 @@
 import {  useLocation} from "react-router-dom";
 import Product from "../components/Product";
 import productArray from "../model";
+import "../css/review.css"
 
 function Reviews(props) {
   let location = new useLocation();
   let id = location.state.id;
+
+  
 
   //Get Product by ID
   let product = {};
@@ -60,7 +63,8 @@ function Reviews(props) {
   }
   let test = productReviews.map((review) => (
     <div>
-      <p>Rating {review.rating}</p>
+      <br></br>
+      <p>Rating: {review.rating}</p>
       <p>Review:{review.message}</p>
       <p>Reviewer: {review.reviewer}</p>
     </div>
@@ -68,7 +72,7 @@ function Reviews(props) {
 
   return (
     <>
-      <p>Product ID: {location.state.id}</p>
+      {/* <p>Product ID: {location.state.id}</p> */}
       <Product
         name={product.name}
         price={product.price}
@@ -77,7 +81,7 @@ function Reviews(props) {
         description={product.description}
         id={product.id}
       />
-      <p>Average Rating:{averageRating}</p>
+      <p id="avg">Average Rating:{averageRating}</p>
       {test}
     </>
   );

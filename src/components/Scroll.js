@@ -2,6 +2,7 @@ import "../css/productList.css";
 
 function Scroll() {
   return (
+    
     <div className="bd-example">
       <div
         id="carouselExampleCaptions"
@@ -21,34 +22,34 @@ function Scroll() {
           <div className="carousel-item active">
             <img
               src="https://m.media-amazon.com/images/I/41zSn74fPuL._AC_.jpg"
-              class="d-block w-100"
+              className="d-block w-100"
               alt="..."
             />
             <div className="carousel-caption d-none d-md-block" id="chicken">
-              <h5>Chef Favorites</h5>
-              <p>Oven Baked Chicken Breast</p>
+              {/* <h5>Chef Favorites</h5>
+              <p>Oven Baked Chicken Breast</p> */}
             </div>
           </div>
           <div className="carousel-item">
             <img
               src="https://m.media-amazon.com/images/I/91xP-3wsv+S._SX679_.jpg"
-              class="d-block w-100"
+              className="d-block w-100"
               alt="..."
             />
             <div className="carousel-caption d-none d-md-block">
-              <h5>Weekly Special</h5>
-              <p>Mushroom Risotto</p>
+              {/* <h5>Weekly Special</h5>
+              <p>Mushroom Risotto</p> */}
             </div>
           </div>
           <div className="carousel-item">
             <img
               src="https://m.media-amazon.com/images/I/81y+lNz36OL._AC_SX679_.jpg"
-              class="d-block w-100"
+              className="d-block w-100"
               alt="..."
             />
             <div className="carousel-caption d-none d-md-block">
-              <h5>Try our sauces</h5>
-              <p>BEST HOMEMADE ALFREDO SAUCE</p>
+              {/* <h5>Try our sauces</h5>
+              <p>BEST HOMEMADE ALFREDO SAUCE</p> */}
             </div>
           </div>
         </div>
