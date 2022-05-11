@@ -50,11 +50,11 @@ function deleteCartHandler(){
   
 
   return (
-    <div>
+    <div className="fullInfo">
       <h3> {props.name}</h3>
       {description}
       <h4>Price: {props.price} </h4>
-      <img alt={props.name} src={props.image} width="150" height="70" />
+      <img className="mainImage" alt={props.name} src={props.image} width="200" height="70" />
       <br></br>
       <br></br>
       <button className="productButton" onClick={handleClick}>Leave a Review</button>

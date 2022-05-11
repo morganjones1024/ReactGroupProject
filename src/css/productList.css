@@ -9,6 +9,9 @@ position: relative;
 left: 10rem;
 
 }
+.bd-example{
+  margin-top: 25px;
+}
 
 .productButton{
   color:white;
@@ -33,14 +36,14 @@ left: 10rem;
 }
 
 .carousel-item{
-  max-height: 200vh;
-  width:700px;
-  height: 500px;
-  left:50%;
-  top:50%;
-  margin-left:-390px;
-  margin-top:-325px;
   
+  height: 200px;
+ 
+ 
+  
+}
+.carousel-inner{
+  height: 100%;
 }
             
   .carousel-caption{ color: black;
@@ -52,4 +55,13 @@ img.d-block.d-block{
   height: 300px;
   width: 100%;
   object-fit: contain;
+}
+
+.mainImage{
+  height: 200px ;
+  width: auto ;
+  
+}
+.fullInfo{
+  background-color: rgb(240, 169, 181);
 }

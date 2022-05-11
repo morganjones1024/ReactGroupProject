@@ -2,14 +2,13 @@ import "../css/productList.css";
 
 function Scroll() {
   return (
-    
     <div className="bd-example">
       <div
         id="carouselExampleCaptions"
         className="carousel slide"
         data-ride="carousel"
       >
-        <ol className="carousel-indicators">
+        {/* <ol className="carousel-indicators">
           <li
             data-target="#carouselExampleCaptions"
             data-slide-to="0"
@@ -17,12 +16,12 @@ function Scroll() {
           ></li>
           <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
           <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
-        </ol>
+        </ol> */}
         <div className="carousel-inner">
           <div className="carousel-item active">
             <img
+              className="img-fluid h-100"
               src="https://m.media-amazon.com/images/I/41zSn74fPuL._AC_.jpg"
-              className="d-block w-100"
               alt="..."
             />
             <div className="carousel-caption d-none d-md-block" id="chicken">
@@ -32,8 +31,8 @@ function Scroll() {
           </div>
           <div className="carousel-item">
             <img
+              className="img-fluid h-100"
               src="https://m.media-amazon.com/images/I/91xP-3wsv+S._SX679_.jpg"
-              className="d-block w-100"
               alt="..."
             />
             <div className="carousel-caption d-none d-md-block">
@@ -43,8 +42,8 @@ function Scroll() {
           </div>
           <div className="carousel-item">
             <img
+              className="img-fluid h-100"
               src="https://m.media-amazon.com/images/I/81y+lNz36OL._AC_SX679_.jpg"
-              className="d-block w-100"
               alt="..."
             />
             <div className="carousel-caption d-none d-md-block">
