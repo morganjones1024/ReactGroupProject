@@ -1,0 +1,35 @@
+
+.jumbotron {
+    background: url("https://static.toiimg.com/photo/63882496.cms?imgsize=137715");
+   
+    background-size: 100% 130%;
+
+    
+  }
+  .btn-primary{
+    background-color: #343a40;
+    border-color:  #343a40;
+
+  }
+
+.lead{
+    font-size: 19;
+    margin-left: 80px;
+    color: black !important
+  }
+ 
+
+.carousel-item{
+  
+  width:700px;
+  height: 500px;
+  left:50%;
+  top:50%;
+  margin-left:-390px;
+  margin-top:-325px;
+  
+}
+            
+  .carousel-caption{ color: black;
+          }
+#chicken{color: white;}

@@ -1,6 +1,7 @@
 import Product from "./Product";
 import productArray from "../model";
-
+import "../css/productList.css";
+import Scroll from "../components/Scroll";
 
 function ProductList(props) {
   // let [cartItems, setcartItems] = useState([]);
@@ -20,7 +21,13 @@ function ProductList(props) {
       />
     </div>
   ));
-  return <>{productElements}</>;
+  return (
+    <>
+      <Scroll></Scroll>
+
+      {productElements}
+    </>
+  );
 }
 
 export default ProductList;

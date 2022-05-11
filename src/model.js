@@ -14,7 +14,6 @@ let productArray = [
     price: 27.99,
     description:
       "Our kawaii Sanrio Hello Kitty Top Ramen ceramic ramen bowl with chopsticks holds 20 ounces of your favorite noodles.",
-    image: "https://cdn.buttercms.com/UqbFGAJLTGqtYqF2UajV",
     image: "https://m.media-amazon.com/images/I/71z76VRBhGL._AC_SX679_.jpg",
   
   },
